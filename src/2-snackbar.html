@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Form</title>
+    <title>Snackbar</title>
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
@@ -18,8 +18,8 @@
           </a> -->
           <ul class="nav-list">
             <li class="nav-item">
-              <a class="nav-link {=$highlight-act}" href="./1-gallery.html"
-                >Gallery</a
+              <a class="nav-link {=$highlight-act}" href="./1-timer.html"
+                >Timer</a
               >
             </li>
             <li class="nav-item">
@@ -30,30 +30,30 @@
       </div>
     </header>
     <main>
-      <div class="container">
-        <form class="feedback-form" autocomplete="off">
-          <label class="feedback-form-label">
-            Email
-            <input
-              class="feedback-form-input"
-              type="email"
-              name="email"
-              autofocus
-            />
+      <div class="form-wrapper">
+        <form class="form">
+          <label class="lable-delay">
+            Delay (ms)
+            <input class="input-form" type="number" name="delay" required />
           </label>
-          <label class="feedback-form-label">
-            Message
-            <textarea
-              class="feedback-form-input"
-              name="message"
-              rows="8"
-            ></textarea>
-          </label>
-          <button class="feedback-form-btn" type="submit">Submit</button>
+
+          <fieldset>
+            <legend>State</legend>
+            <label>
+              <input type="radio" name="state" value="fulfilled" required />
+              Fulfilled
+            </label>
+            <label>
+              <input type="radio" name="state" value="rejected" required />
+              Rejected
+            </label>
+          </fieldset>
+
+          <button type="submit">Create notification</button>
         </form>
       </div>
     </main>
-    <script type="module" src="./js/2-form.js"></script>
+    <script type="module" src="./js/2-snackbar.js"></script>
   </body>
 </html>
 <!-- only for job -->
