@@ -13,6 +13,7 @@ const secondsEl = document.querySelector('[data-seconds]');
 
 let userSelectedDate = null;
 let timerId = null;
+startBtn.disabled = true;
 
 flatpickr(datePick, {
   enableTime: true,
